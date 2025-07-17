@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en" class="scroll-smooth"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Mukhtar Ansari | Global IT Leader | Interactive Resume&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Chosen Palette: Professional Blue &amp; Slate --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Application Structure Plan: A single-page application designed as an executive dashboard. The structure prioritizes immediate impact by leading with a "Strategic Dashboard" of key metrics. It then allows for deeper exploration through interactive sections: "Core Expertise" (tabs), an "Impact Timeline" (expandable), and a "Visualized Accomplishments" chart. This non-linear, thematic structure is chosen over a standard resume format to allow busy executives (the target audience) to quickly assess value and explore areas of interest efficiently, enhancing usability and engagement. --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Visualization &amp; Content Choices:</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Strategic Dashboard (Inform): Uses HTML/CSS "stat cards" to present top-line numbers (savings, revenue growth) for immediate impact.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Core Expertise (Organize): Uses JS-powered tabs to categorize skills, preventing cognitive overload from a long list and allowing focused exploration.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Impact Timeline (Show Change): An interactive, vertical timeline built with HTML/CSS/JS. Users can click to expand each role, revealing accomplishments in context. This tells a compelling career story.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Visualized Accomplishments (Compare): A Chart.js horizontal bar chart compares key percentage-based achievements. This provides a powerful, at-a-glance summary of performance.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Justification: These choices translate the static text of the resume into an interactive narrative, making the information more digestible, memorable, and aligned with the expectations for a modern technology leader's digital presence.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: 'Inter', sans-serif; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.tab-content { display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.tab-content.active { display: block; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.timeline-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="bg-slate-50 text-slate-800"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-6 py-3 flex justify-between items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="text-xl font-bold text-slate-900"&gt;Mukhtar Ansari&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="hidden md:flex space-x-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#dashboard" class="text-slate-600 hover:text-blue-600"&gt;Dashboard&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#expertise" class="text-slate-600 hover:text-blue-600"&gt;Expertise&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#timeline" class="text-slate-600 hover:text-blue-600"&gt;Timeline&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#impact" class="text-slate-600 hover:text-blue-600"&gt;Impact&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="mailto:mukhtar.ansari@gmail.com" class="hidden md:block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"&gt;Contact Me&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;main class="container mx-auto px-6 py-12"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;header class="text-center mb-16"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4"&gt;Global Vice President, IT &amp; Infrastructure&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-xl text-slate-600 max-w-3xl mx-auto"&gt;Building Ethical AI-first Enterprises for Global Scale | Aspiring CIO&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="dashboard" class="mb-20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 class="text-3xl font-bold text-center mb-2 text-slate-900"&gt;Strategic Dashboard&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-center text-slate-500 mb-10 max-w-2xl mx-auto"&gt;This dashboard presents a high-level overview of key quantifiable achievements, reflecting a career dedicated to driving growth, efficiency, and robust security. These metrics summarize the tangible business value delivered through strategic IT leadership.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 class="text-4xl font-bold text-blue-600 mb-2"&gt;30%&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-slate-600"&gt;Revenue Growth&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 class="text-4xl font-bold text-blue-600 mb-2"&gt;₹5Cr+&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-slate-600"&gt;Annual Cost Savings&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 class="text-4xl font-bold text-blue-600 mb-2"&gt;40%&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-slate-600"&gt;Vulnerability Reduction&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 class="text-4xl font-bold text-blue-600 mb-2"&gt;400+&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-slate-600"&gt;Firewalls &amp; SD-WAN Managed&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="expertise" class="mb-20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 class="text-3xl font-bold text-center mb-2 text-slate-900"&gt;Core Expertise&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-center text-slate-500 mb-10 max-w-2xl mx-auto"&gt;This section details the breadth and depth of my technical and strategic capabilities. Use the tabs below to explore the specific competencies that enable successful digital transformation and secure, scalable enterprise operations.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-white p-2 rounded-xl border border-slate-200 shadow-sm max-w-4xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex flex-wrap justify-center border-b border-slate-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button data-tab="tab1" class="tab-button active px-4 py-3 text-sm md:text-base font-semibold text-blue-600 border-b-2 border-blue-600"&gt;Leadership&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button data-tab="tab2" class="tab-button px-4 py-3 text-sm md:text-base font-semibold text-slate-500"&gt;Cybersecurity&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button data-tab="tab3" class="tab-button px-4 py-3 text-sm md:text-base font-semibold text-slate-500"&gt;Cloud &amp; Infra&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button data-tab="tab4" class="tab-button px-4 py-3 text-sm md:text-base font-semibold text-slate-500"&gt;Transformation&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="tab1" class="tab-content active p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-slate-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Enterprise IT Strategy&lt;/li&gt;&lt;li&gt;Business Alignment&lt;/li&gt;&lt;li&gt;C-suite Collaboration&lt;/li&gt;&lt;li&gt;IT Governance&lt;/li&gt;&lt;li&gt;Strategic Tech Investments&lt;/li&gt;&lt;li&gt;Budget Planning&lt;/li&gt;&lt;li&gt;Cost Optimization&lt;/li&gt;&lt;li&gt;Vendor Negotiations&lt;/li&gt;&lt;li&gt;Global Team Leadership&lt;/li&gt;&lt;li&gt;Talent Development &amp; Mentorship&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="tab2" class="tab-content p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                     </span>&lt;ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-slate-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;ISO 27001 &amp; ISMS&lt;/li&gt;&lt;li&gt;Zero Trust Architecture&lt;/li&gt;&lt;li&gt;Risk Management &amp; Compliance&lt;/li&gt;&lt;li&gt;Cloud &amp; End-User Security&lt;/li&gt;&lt;li&gt;Incident Response&lt;/li&gt;&lt;li&gt;Single Sign-On (SSO)&lt;/li&gt;&lt;li&gt;Identity &amp; Access Management (IAM)&lt;/li&gt;&lt;li&gt;XDR &amp; MDR&lt;/li&gt;&lt;li&gt;Role-Based Access Control (RBAC)&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="tab3" class="tab-content p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-slate-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;AWS &amp; Azure Architecture&lt;/li&gt;&lt;li&gt;Hybrid Cloud Strategy&lt;/li&gt;&lt;li&gt;High Availability &amp; Disaster Recovery&lt;/li&gt;&lt;li&gt;Network Management (400+ Firewalls)&lt;/li&gt;&lt;li&gt;SD-WAN Solutions&lt;/li&gt;&lt;li&gt;Mobile Device Management (MDM)&lt;/li&gt;&lt;li&gt;DevOps &amp; SRE (Kubernetes, Jenkins)&lt;/li&gt;&lt;li&gt;Automation (Terraform, Ansible)&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="tab4" class="tab-content p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-slate-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;ERP/CRM (SAP S/4HANA)&lt;/li&gt;&lt;li&gt;AI/ML &amp; LLMOps Integration&lt;/li&gt;&lt;li&gt;IoT &amp; Edge Technologies&lt;/li&gt;&lt;li&gt;Data Analytics (PySpark)&lt;/li&gt;&lt;li&gt;Real-Time BI&lt;/li&gt;&lt;li&gt;RAG Architectures (GPT-4, Mistral)&lt;/li&gt;&lt;li&gt;Business Process Optimization&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="timeline" class="mb-20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 class="text-3xl font-bold text-center mb-2 text-slate-900"&gt;Impact Timeline&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-center text-slate-500 mb-10 max-w-2xl mx-auto"&gt;Follow my career journey and see how key responsibilities and accomplishments have evolved over time. Click on any role to expand and view the specific contributions made during that period.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="relative max-w-3xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="absolute left-1/2 w-0.5 h-full bg-slate-200 -translate-x-1/2"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="timeline-item relative mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-1/2 pr-8 text-right"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="font-semibold text-blue-600"&gt;April 2021 – Current&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-1/2 pl-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm cursor-pointer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="font-bold text-slate-900"&gt;Global VP, IT &amp; Infrastructure&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm text-slate-500"&gt;Rebel Foods&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="timeline-content mt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;ul class="text-sm text-slate-600 list-disc pl-5 space-y-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;li&gt;Led ISO 27001/Zero Trust transformation, cutting vulnerabilities by 40%.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;li&gt;Enabled 50% annual growth via scalable AWS/Azure architectures.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;li&gt;Drove 30% revenue growth with AI-driven food traceability systems.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;li&gt;Directed global SAP S/4HANA migration, improving reporting by 35%.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="timeline-item relative mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex items-center flex-row-reverse"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-1/2 pl-8 text-left"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                           </span>&lt;p class="font-semibold text-blue-600"&gt;Oct 2015 – Mar 2021&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-1/2 pr-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm cursor-pointer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="font-bold text-slate-900"&gt;Global AVP, IT &amp; Infrastructure&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm text-slate-500"&gt;Rebel Foods&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="timeline-content mt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;ul class="text-sm text-slate-600 list-disc pl-5 space-y-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;li&gt;Scaled infrastructure for 450+ cloud kitchens with 99.9% uptime.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;li&gt;Achieved ₹5Cr/year in IT budget optimization.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;li&gt;Pioneered a Big Data strategy with a PySpark-based Data Lake.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;li&gt;Cut deployment times by 40% with Terraform &amp; Ansible.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                 </span>&lt;div class="timeline-item relative mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-1/2 pr-8 text-right"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="font-semibold text-blue-600"&gt;July 2012 – Oct 2015&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-1/2 pl-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm cursor-pointer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="font-bold text-slate-900"&gt;Sr. Manager IT Operations&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm text-slate-500"&gt;OLACabs&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="timeline-content mt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;ul class="text-sm text-slate-600 list-disc pl-5 space-y-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;li&gt;Scaled contact center from 30 to 1,500 seats across 120 cities.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;li&gt;Reduced network latency by 30% with MPLS/SIP network design.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;li&gt;Delivered a 25% revenue increase through a strategic IT roadmap.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="impact" class="mb-20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 class="text-3xl font-bold text-center mb-2 text-slate-900"&gt;Visualized Accomplishments&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-center text-slate-500 mb-10 max-w-2xl mx-auto"&gt;This chart provides a comparative view of key performance improvements driven by strategic initiatives. It visually underscores the consistent delivery of efficiency gains, risk reduction, and business process enhancements across various roles.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="chart-container relative w-full max-w-3xl mx-auto h-80 md:h-96"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;canvas id="impactChart"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;footer class="text-center pt-8 border-t border-slate-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-slate-600 mb-2"&gt;"Believe in technology as a force for equitable growth - mentoring 50+ future leaders while building ethical, AI-first organisations."&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-sm text-slate-500"&gt;&amp;copy; 2024 Mukhtar Ansari. All Rights Reserved.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', function() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const tabs = document.querySelectorAll('.tab-button');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const contents = document.querySelectorAll('.tab-content');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>tabs.forEach(tab =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>tab.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>tabs.forEach(item =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>item.classList.remove('active', 'text-blue-600', 'border-blue-600');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>item.classList.add('text-slate-500');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>contents.forEach(content =&gt; content.classList.remove('active'));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const target = document.getElementById(tab.dataset.tab);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>tab.classList.add('active', 'text-blue-600', 'border-blue-600');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>target.classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const timelineItems = document.querySelectorAll('.timeline-item .cursor-pointer');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>timelineItems.forEach(item =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>item.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const content = item.querySelector('.timeline-content');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (content.style.maxHeight &amp;&amp; content.style.maxHeight !== '0px') {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>content.style.maxHeight = '0px';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>content.style.maxHeight = content.scrollHeight + 'px';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const ctx = document.getElementById('impactChart').getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const impactChart = new Chart(ctx, {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>type: 'bar',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>data: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>labels: ['Vulnerability Reduction', 'Op. Efficiency Increase', 'Reporting Time Cut', 'Software Delivery Acceleration', 'Downtime Reduction'],</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>datasets: [{</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>label: '% Improvement',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>data: [40, 35, 35, 50, 25],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>backgroundColor: 'rgba(59, 130, 246, 0.7)',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>borderColor: 'rgba(59, 130, 246, 1)',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>borderWidth: 1</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}]</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>indexAxis: 'y',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>responsive: true,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>maintainAspectRatio: false,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>scales: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>x: {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>beginAtZero: true,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>grid: {</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>color: 'rgba(203, 213, 225, 0.3)'</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>ticks: {</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>callback: function(value) {</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>return value + '%'</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>y: {</p>
+<p class="p1"><span class="Apple-converted-space">                             </span>grid: {</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>display: false</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>plugins: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>legend: {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>display: false</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>tooltip: {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>callbacks: {</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>label: function(context) {</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>return ` ${context.dataset.label}: ${context.raw}%`;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
