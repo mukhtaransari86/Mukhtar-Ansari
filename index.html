@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,348 +12,220 @@
         /* Base styles for the body */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #e2e8f0; /* Softer, slightly darker background */
-            color: #2d3748; /* Darker text for better contrast */
-            line-height: 1.6; /* Standard line height for better readability */
+            background-color: #e2e8f0;
+            color: #2d3748;
+            line-height: 1.6;
         }
         /* Container for the entire resume content */
         .resume-container {
-            max-width: 1050px; /* Slightly wider container */
-            margin: 2.5rem auto; /* Increased top/bottom margin for more vertical spacing */
+            max-width: 1050px;
+            margin: 2.5rem auto;
             background-color: #ffffff;
-            border-radius: 1rem; /* More rounded corners */
-            box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.15), 0 6px 12px -4px rgba(0, 0, 0, 0.08); /* Stronger, diffused shadow */
-            padding: 2rem; /* Increased overall padding inside the container */
+            border-radius: 1rem;
+            box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.15), 0 6px 12px -4px rgba(0, 0, 0, 0.08);
+            padding: 2rem;
             display: flex;
-            flex-direction: column; /* Default to column layout for small screens */
+            flex-direction: column;
         }
-        /* Media query for medium screens and up (md breakpoint in Tailwind) */
+        /* Media query for medium screens and up */
         @media (min-width: 768px) {
             .resume-container {
-                flex-direction: row; /* Two columns for larger screens */
+                flex-direction: row;
             }
         }
-        /* Styling for the left column (personal details, contacts, skills) */
+        /* Styling for the left column */
         .left-column {
-            flex: 1; /* Takes 1 part of the available space */
-            padding-right: 1.5rem; /* Increased padding on the right for better separation */
-            border-right: 1px solid #cbd5e0; /* Subtle separator line */
+            flex: 1;
+            padding-right: 1.5rem;
+            border-right: 1px solid #cbd5e0;
         }
-        /* Styling for the right column (summary, experience, accomplishments) */
+        /* Styling for the right column */
         .right-column {
-            flex: 2.2; /* Takes more space for content */
-            padding-left: 1.5rem; /* Increased padding on the left */
+            flex: 2.2;
+            padding-left: 1.5rem;
         }
-        /* Media query for small screens (max-width 767px) to adjust column layout */
+        /* Media query for small screens */
         @media (max-width: 767px) {
             .left-column {
-                border-right: none; /* Remove vertical separator */
+                border-right: none;
                 padding-right: 0;
-                padding-bottom: 1.5rem; /* Increased padding at the bottom */
-                border-bottom: 1px solid #cbd5e0; /* Add horizontal separator when stacked */
+                padding-bottom: 1.5rem;
+                border-bottom: 1px solid #cbd5e0;
             }
             .right-column {
                 padding-left: 0;
-                padding-top: 1.5rem; /* Increased padding at the top */
+                padding-top: 1.5rem;
             }
         }
         /* Styling for the main name heading */
         h1 {
-            font-size: 2.2rem; /* Significantly larger for prominence */
-            font-weight: 700; /* Bold font */
-            color: #1a202c; /* Very dark gray */
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1a202c;
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
-            letter-spacing: -0.02em; /* Slightly tighter letter spacing */
+            letter-spacing: -0.02em;
         }
-        /* Styling for the tagline below the main name */
+        /* Styling for the tagline */
         .tagline {
-            font-size: 1.1rem; /* Larger and more impactful */
-            line-height: 1.5; /* Improved line height */
-            margin-bottom: 1.5rem; /* More space below tagline */
-            color: #4299e1; /* Professional blue */
-            font-weight: 500; /* Medium weight */
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            color: #4299e1;
+            font-weight: 500;
         }
         /* General styling for all h2 section headers */
         h2 {
-            font-size: 1.3rem; /* Larger for section titles */
-            font-weight: 700; /* Changed to 700 for bold */
+            font-size: 1.3rem;
+            font-weight: 700;
             color: #1a202c;
-            margin-top: 1.8rem; /* More space above sections */
-            margin-bottom: 0.8rem; /* More space below section titles */
-            border-bottom: 2px solid #4299e1; /* Professional blue underline */
-            padding-bottom: 0.3rem; /* More padding for underline */
-        }
-        /* General styling for all h3 sub-headers */
-        h3 {
-            font-size: 1rem; /* Slightly larger */
-            font-weight: 600; /* Semi-bold font */
-            color: #2d3748;
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
+            margin-top: 1.8rem;
+            margin-bottom: 0.8rem;
+            border-bottom: 2px solid #4299e1;
+            padding-bottom: 0.3rem;
         }
         /* General styling for paragraphs, lists, and list items */
         p, ul, li {
-            font-size: 0.95rem; /* Increased base font size */
-            line-height: 1.6; /* Standard line height for body text */
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
         p {
-            margin-bottom: 0.8rem; /* More space below paragraphs */
+            margin-bottom: 0.8rem;
         }
         ul {
-            list-style-type: disc; /* Bullet points for lists */
-            margin-left: 1.5rem; /* Increased indentation for list items */
+            list-style-type: disc;
+            margin-left: 1.5rem;
         }
         li {
-            margin-bottom: 0.5rem; /* More space between list items */
+            margin-bottom: 0.5rem;
         }
-        /* Specific styling for CORE COMPETENCIES list items */
-        .core-competencies-section ul li {
-            font-size: 0.9rem; /* Slightly smaller for compactness */
-            line-height: 1.5;
-            margin-bottom: 0.3rem;
-        }
-        /* Styling for contact information paragraphs */
+        /* Styling for contact information */
         .contact-info p {
-            font-size: 0.95rem; /* Consistent with body text */
+            font-size: 0.95rem;
             margin-bottom: 0.3rem;
         }
         /* Styling for job titles */
         .job-title {
-            font-weight: 700; /* Changed to 700 for bold */
+            font-weight: 700;
             color: #1a202c;
-            font-size: 1rem; /* Slightly larger */
+            font-size: 1rem;
         }
         /* Styling for company names */
         .company-name {
             font-style: italic;
             color: #4a5568;
-            font-size: 0.95rem; /* Consistent with body text */
+            font-size: 0.95rem;
         }
         /* Styling for date ranges */
         .date-range {
             color: #718096;
-            font-size: 0.85rem; /* Slightly larger */
+            font-size: 0.85rem;
             margin-bottom: 0.5rem;
         }
-        /* Standard bottom margin for sections */
-        .mb-6 {
-            margin-bottom: 2rem; /* Increased for more separation */
-        }
-        /* Standard bottom margin for individual job entries */
-        .mb-4 {
-            margin-bottom: 1.2rem; /* Increased */
-        }
-        /* Adjusted margin-top for the first heading in each tab */
-        .tab-content-section h2 {
-            margin-top: 0; /* No top margin as it's the first element in a tab */
-            padding-top: 0;
-        }
-        /* Styling for Key Metrics section list items */
-        .key-metrics-section ul {
-            list-style-type: none; /* Remove bullet points */
-            margin-left: 0; /* Remove default left margin */
-        }
-        .key-metrics-section ul li {
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-        .key-metrics-section ul li strong {
-            font-size: 1.2rem; /* Slightly larger for emphasis */
-            color: #4299e1; /* Professional blue for emphasis */
-            margin-right: 0.4rem;
-        }
-
-        /* Styling for Career Journey section (formerly Growth Matrix) */
-        .career-journey-section { /* Renamed class */
-            margin: 1.5rem 0 2rem 0; /* Adjusted margins */
-            width: 100%;
-            position: relative;
-        }
-
-        .career-journey { /* Renamed class */
-            display: flex;
-            flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
-            justify-content: center; /* Center items in the row */
-            align-items: flex-start;
-            gap: 1.5rem; /* Increased gap between items */
-            position: relative;
-            padding-top: 0.8rem; /* More padding top to visually separate from heading */
-            overflow-x: hidden; /* Hide horizontal scroll if content overflows */
-            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-        }
-        /* Styling for individual experience blocks */
-        .experience-block {
-            background-color: #f0f8ff; /* Very light blue, almost white */
-            border: none; /* Removed borders */
-            border-radius: 0.75rem; /* More rounded corners */
-            padding: 1rem 1.2rem; /* Increased padding inside boxes */
-            text-align: center; /* Centered text for cleaner look */
-            flex: 1 1 180px; /* Adjusted flex-basis for slightly larger default size */
-            min-width: 150px; /* Increased min-width */
-            max-width: 220px; /* Increased max-width */
-            height: 130px; /* Increased fixed height */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-            scroll-snap-align: none;
-            margin-top: 0;
-            margin-bottom: 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effect */
-        }
-        .experience-block:hover {
-            transform: translateY(-5px); /* Lift effect on hover */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12); /* More pronounced shadow on hover */
-        }
-        /* Styling for strong text within experience blocks (e.g., company name) */
-        .experience-block strong {
-            display: block;
-            font-size: 1rem; /* Larger */
-            color: #1a202c;
-            margin-bottom: 0.15rem;
-            line-height: 1.4;
-            text-align: center;
-            font-weight: 600; /* More prominent */
-        }
-        /* Styling for span text within experience blocks (e.g., role, dates) */
-        .experience-block span {
-            display: block;
-            font-size: 0.85rem; /* Larger */
-            color: #4a5568;
-            line-height: 1.3;
-            text-align: center;
-        }
-        /* Styling for the journey description within experience blocks */
-        .experience-block .journey-description {
-            font-size: 0.75rem; /* Larger */
-            color: #718096;
-            margin-top: 0.4rem;
-            line-height: 1.3;
-            text-align: center;
-        }
-
-        /* Hide all arrow elements (line, head, start square) */
-        .arrow-line, .arrow-head, .arrow-start-square {
-            display: none;
-        }
-
-        /* Responsive adjustments for the matrix on small screens */
-        @media (max-width: 767px) {
-            .career-journey-section {
-                width: 100%;
-                margin: 1.5rem auto;
-                padding: 0;
-            }
-            .career-journey {
-                flex-direction: column; /* Stack vertically on small screens */
-                align-items: center;
-                gap: 1rem;
-                height: auto;
-                padding: 0;
-                overflow-x: hidden;
-            }
-            .experience-block {
-                width: 90%; /* Take more width when stacked */
-                max-width: 300px; /* Increased max-width for stacked blocks */
-                height: auto; /* Allow height to adjust on small screens */
-                min-height: 100px; /* Increased min-height for stacked blocks */
-                flex: 0 0 auto; /* Reset flex for stacked view */
-                padding: 0.8rem 1rem; /* Adjusted padding for stacked view */
-            }
-            .experience-block strong,
-            .experience-block span,
-            .experience-block .journey-description {
-                text-align: center; /* Ensure centered text on mobile */
-            }
-        }
-        /* New styles for paragraphs and lists in the right column for compactness */
-        .right-column p,
-        .right-column ul,
-        .right-column li {
-            line-height: 1.6; /* Adjusted for better readability */
-            margin-bottom: 0.5rem; /* Adjusted for better spacing */
-        }
-        .right-column ul {
-            margin-left: 1.5rem; /* Consistent with other lists */
-        }
-        .right-column .summary-section p {
-            margin-bottom: 1rem; /* More space for summary paragraphs */
-            line-height: 1.7; /* Slightly more relaxed line height for summary */
-            font-size: 1rem; /* Slightly larger for summary */
-        }
-        .right-column .professional-experience-section ul li {
-            margin-bottom: 0.4rem; /* Slightly tighter for professional experience bullet points */
-        }
-
-        /* Styles for the tab navigation */
-        .tab-nav {
-            display: flex;
-            flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
-            border-bottom: 2px solid #e2e8f0; /* Softer separator below tabs */
-            margin-bottom: 1.8rem; /* More space below tabs */
-            padding-bottom: 0.8rem; /* More padding below tabs */
-            gap: 0.8rem; /* Increased space between tabs */
-            justify-content: center; /* Changed from flex-start to center */
-            width: 100%; /* Added to ensure full width */
-        }
-        .tab-button {
-            padding: 0.7rem 1.4rem; /* Increased padding for larger touch targets */
-            font-size: 0.9rem; /* Slightly larger font for tabs */
-            font-weight: bold; /* Make font bold */
-            font-style: italic; /* Make font italic */
-            color: #4a5568; /* Darker gray for inactive tab text */
-            background-color: #f7fafc; /* Very light gray for inactive tab background */
-            border: 1px solid #e2e8f0; /* Subtle border for inactive tabs */
-            border-radius: 0.6rem; /* More rounded corners for tabs */
-            cursor: pointer;
-            transition: all 0.2s ease-in-out;
-            /* Removed white-space: nowrap; to allow text to wrap */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03); /* Lighter shadow for inactive tabs */
-        }
-        .tab-button:hover {
-            color: #2b6cb0; /* Darker blue on hover */
-            background-color: #ebf8ff; /* Lighter blue on hover */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06); /* Slightly more pronounced shadow on hover */
-        }
-        .tab-button.active {
-            color: #ffffff; /* White text for active tab */
-            background-color: #4299e1; /* Solid blue for active tab */
-            font-weight: bold; /* Ensure active tab is also bold */
-            font-style: italic; /* Ensure active tab is also italic */
-            border-bottom: none; /* Remove individual button underline when active */
-            box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.1), 0 3px 6px -1px rgba(0, 0, 0, 0.08); /* More pronounced shadow for active */
-            border-color: #4299e1; /* Border color matches background for active tab */
-        }
-        /* Hide content sections by default */
-        .tab-content-section {
-            display: none;
-            width: 100%; /* Added to ensure full width */
-        }
-        /* Show active content section */
-        .tab-content-section.active {
-            display: block;
-        }
-
         /* Profile image styling */
         .profile-image-container {
             margin-bottom: 1.5rem;
             text-align: center;
         }
         .profile-image {
-            width: 220px; /* Even larger size */
-            height: 220px; /* Even larger size */
-            border-radius: 50%; /* Circular image */
-            object-fit: cover; /* Ensure image covers the area */
-            border: 6px solid #4299e1; /* Thicker blue border */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #4299e1;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
-
-        /* Styles for the "Explore Full Profile" button */
+        /* Career Journey Section */
+        .career-journey {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 1.5rem;
+            position: relative;
+            padding-top: 0.8rem;
+        }
+        .experience-block {
+            background-color: #f0f8ff;
+            border-radius: 0.75rem;
+            padding: 1rem 1.2rem;
+            text-align: center;
+            flex: 1 1 180px;
+            min-width: 150px;
+            max-width: 220px;
+            height: 130px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .experience-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+        }
+        .experience-block strong {
+            display: block;
+            font-size: 1rem;
+            color: #1a202c;
+            margin-bottom: 0.15rem;
+            line-height: 1.4;
+            font-weight: 600;
+        }
+        .experience-block span {
+            display: block;
+            font-size: 0.85rem;
+            color: #4a5568;
+            line-height: 1.3;
+        }
+        .experience-block .journey-description {
+            font-size: 0.75rem;
+            color: #718096;
+            margin-top: 0.4rem;
+            line-height: 1.3;
+        }
+        /* Tab Navigation */
+        .tab-nav {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #e2e8f0;
+            margin-bottom: 1.8rem;
+            padding-bottom: 0.8rem;
+            gap: 0.8rem;
+            justify-content: center;
+            width: 100%;
+        }
+        .tab-button {
+            padding: 0.7rem 1.4rem;
+            font-size: 0.9rem;
+            font-weight: bold;
+            font-style: italic;
+            color: #4a5568;
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.6rem;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+        .tab-button:hover {
+            color: #2b6cb0;
+            background-color: #ebf8ff;
+        }
+        .tab-button.active {
+            color: #ffffff;
+            background-color: #4299e1;
+            border-color: #4299e1;
+        }
+        /* Tab Content */
+        .tab-content-section {
+            display: none;
+            width: 100%;
+        }
+        .tab-content-section.active {
+            display: block;
+        }
+        /* Explore Button */
         .explore-button-container {
             text-align: center;
             margin-top: 2rem;
@@ -367,73 +239,87 @@
             font-weight: 600;
             cursor: pointer;
             transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border: none;
         }
         .explore-button:hover {
             background-color: #3182ce;
             transform: translateY(-2px);
         }
+        /* Key Metrics Section */
+        .key-metrics-section ul {
+            list-style-type: none;
+            margin-left: 0;
+        }
+        .key-metrics-section ul li strong {
+            font-size: 1.2rem;
+            color: #4299e1;
+            margin-right: 0.4rem;
+        }
+        @media (max-width: 767px) {
+            .career-journey {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            .experience-block {
+                width: 90%;
+                max-width: 300px;
+                height: auto;
+                min-height: 100px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="resume-container">
         <div class="left-column">
-            <!-- Profile Image -->
+            <!-- Profile Image - FIXED with correct path -->
             <div class="profile-image-container">
-                <!-- Replace 'https://placehold.co/120x120/4299e1/ffffff?text=MA' with your actual GitHub image URL -->
-                <img src="https://raw.githubusercontent.com/mukhtaransari86/myresume/main/Docpp.jpg" alt="Mukhtar Ansari Profile" class="profile-image">
-
+                <img src="Docpp.jpg" alt="Mukhtar Ansari Profile" class="profile-image">
             </div>
 
-            <!-- Changed h2 to be bold via CSS style rule -->
-            <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-1 mb-3">MUKHTAR ANSARI</h2>
+            <h2>MUKHTAR ANSARI</h2>
             <p class="tagline">Global Vice President | Building Ethical AI-first Enterprises for Global Scale</p>
 
-            <div class="contact-info mb-6">
-                <!-- Changed h2 to be bold via CSS style rule -->
-                <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-1 mb-3">CONTACT</h2>
+            <div class="contact-info">
+                <h2>CONTACT</h2>
                 <p><strong>Mumbai, India</strong></p>
                 <p><strong>+91 7666733111</strong></p>
                 <p><strong>mukhtar.ansari@gmail.com</strong></p>
                 <p><a href="https://www.linkedin.com/in/mukhtaransari-itleader/" target="_blank" class="text-blue-600 hover:underline"><strong>LinkedIn Profile</strong></a></p>
             </div>
 
-            <div class="certifications-section mb-6">
-                <!-- Changed h2 to be bold via CSS style rule -->
-                <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-1 mb-3">CERTIFICATIONS</h2>
+            <div class="certifications-section">
+                <h2>CERTIFICATIONS</h2>
                 <ul>
-                    <li><strong>Certified Information Security Manager ,ISACA</strong> - 2025</li>
+                    <li><strong>Certified Information Security Manager, ISACA</strong> - 2025</li>
                     <li><strong>Certified Leadership, IIM Ahmedabad</strong> - 2023</li>
-                    <li><strong>Google Project Management Professional Certificate</strong>, Coursera - 2022</li>
+                    <li><strong>Google Project Management Professional Certificate</strong> - 2022</li>
                     <li><strong>Cyber Law, Indian Institute of Law, Delhi</strong> - 2018</li>
                     <li><strong>AWS Certified Solutions Architect - Professional</strong> - 2017</li>
                     <li><strong>Microsoft Server Virtualisation with Windows Server Hyper-V</strong> - 2014</li>
                 </ul>
             </div>
 
-            <div class="languages-section mb-6">
-                <!-- Changed h2 to be bold via CSS style rule -->
-                <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-1 mb-3">LANGUAGES</h2>
+            <div class="languages-section">
+                <h2>LANGUAGES</h2>
                 <p>English, Hindi, Marathi, Urdu</p>
             </div>
 
-            <div class="leadership-philosophy-section mb-6">
-                 <!-- Changed h2 to be bold via CSS style rule -->
-                 <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-1 mb-3">LEADERSHIP PHILOSOPHY</h2>
+            <div class="leadership-philosophy-section">
+                <h2>LEADERSHIP PHILOSOPHY</h2>
                 <p>Committed to leveraging technology as a catalyst for equitable growth, fostering ethical, AI-first organizations, and empowering the next generation of IT leaders through dedicated mentorship.</p>
             </div>
         </div>
 
         <div class="right-column">
-            <!-- Initial Summary Section - always visible on landing -->
-            <div id="summary-landing" class="summary-section mb-6">
-                 <!-- Changed h2 to be bold via CSS style rule -->
-                 <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-1 mb-3">SUMMARY</h2>
+            <!-- Initial Summary Section -->
+            <div id="summary-landing" class="summary-section">
+                <h2>SUMMARY</h2>
                 <p><strong>Visionary IT Executive and IIM Calcutta MBA graduate with 18+ years of progressive leadership.</strong> I am adept at driving <strong>large-scale digital transformation</strong> and fortifying <strong>enterprise security</strong> for multinational corporations. Proven leader leveraging <strong>AI/ML, IoT, and advanced cloud platforms (AWS, Azure)</strong> to deliver significant <strong>top-line growth (30%+)</strong> and substantial <strong>cost efficiencies (₹5Cr+ annual savings)</strong>. Expertise includes <strong>C-suite collaboration</strong>, <strong>international team leadership</strong>, and architecting comprehensive <strong>cybersecurity strategies (ISO 27001, Zero Trust, XDR, MDR)</strong> and robust <strong>network management</strong>. I focus on <strong>strategic technological innovation</strong> to accelerate business objectives and secure sustainable growth.</p>
             </div>
 
-            <!-- Button to reveal full profile/tabs -->
+            <!-- Explore Button -->
             <div class="explore-button-container" id="exploreButtonContainer">
                 <button class="explore-button" onclick="showFullProfile()">Explore Full Profile</button>
             </div>
@@ -453,51 +339,44 @@
                     <button class="tab-button" onclick="openTab(event, 'education')">Education</button>
                 </div>
 
-                <!-- Tab Content Sections (all initially hidden except the default one) -->
+                <!-- Summary Tab -->
                 <div id="summary-tab-content" class="tab-content-section active">
-                    <!-- Content is the same as summary-landing, but it's now part of the tabbed interface -->
-                    <div class="summary-section mb-6">
-                    <!-- Changed h2 to be bold via CSS style rule -->
-                    <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-1 mb-3">SUMMARY</h2>
+                    <div class="summary-section">
+                        <h2>SUMMARY</h2>
                         <p><strong>Visionary IT Executive and IIM Calcutta MBA graduate with 18+ years of progressive leadership.</strong> I am adept at driving <strong>large-scale digital transformation</strong> and fortifying <strong>enterprise security</strong> for multinational corporations. Proven leader leveraging <strong>AI/ML, IoT, and advanced cloud platforms (AWS, Azure)</strong> to deliver significant <strong>top-line growth (30%+)</strong> and substantial <strong>cost efficiencies (₹5Cr+ annual savings)</strong>. Expertise includes <strong>C-suite collaboration</strong>, <strong>international team leadership</strong>, and architecting comprehensive <strong>cybersecurity strategies (ISO 27001, Zero Trust, XDR, MDR)</strong> and robust <strong>network management</strong>. I focus on <strong>strategic technological innovation</strong> to accelerate business objectives and secure sustainable growth.</p>
                     </div>
                 </div>
 
+                <!-- Key Metrics Tab -->
                 <div id="key-metrics" class="tab-content-section">
-                    <div class="key-metrics-section mb-6">
-                       <!-- Changed h2 to be bold via CSS style rule -->
-                       <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-1 mb-3">KEY METRICS</h2>
+                    <div class="key-metrics-section">
+                        <h2>KEY METRICS</h2>
                         <ul>
                             <li><strong>TOP Performer Awards</strong> in <strong>2022, 2019, 2018, 2017 & 2014</strong>.</li>
-                            <li><strong>Global IT Footprint:</strong> Spearheaded IT operations and infrastructure across <strong>10+ global markets</strong> and <strong>450+ cloud kitchens</strong>.</li>
+                            <li><strong>Global IT Footprint:</strong> Spearheaded IT operations across <strong>10+ global markets</strong> and <strong>450+ cloud kitchens</strong>.</li>
                             <li><strong>₹4M</strong> Contributor of <strong>₹4 million revenue per annum</strong>.</li>
                         </ul>
                     </div>
                 </div>
 
+                <!-- Core Competencies Tab -->
                 <div id="core-competencies" class="tab-content-section">
-                    <div class="core-competencies-section mb-6">
-                      <!-- Changed h2 to be bold via CSS style rule -->
-                      <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-1 mb-3">CORE COMPETENCIES</h2>
+                    <div class="core-competencies-section">
+                        <h2>CORE COMPETENCIES</h2>
                         <ul>
-                            <li><strong>Strategic IT Leadership:</strong> Enterprise IT Strategy, Business Alignment, C-suite Collaboration, Cross-functional Team Leadership, IT Governance, Strategic Tech Investments, M&A Integration</li>
-                            <li><strong>Cybersecurity & Risk Management:</strong> ISO 27001, Zero Trust Architecture, ISMS, IT Governance, Regulatory Compliance, Risk Management, Cloud Security, End-User Security, Incident Response, Data Privacy, Single Sign-On (SSO), Identity & Access Management (IAM), Extended Detection & Response (XDR), Managed Detection & Response (MDR), Role-Based Access Control (RBAC)</li>
-                            <li><strong>Cloud & Infrastructure Management:</strong> AWS (EC2, S3, Lambda, EKS), Azure (VMs, AKS), Hybrid Cloud Architectures, Scalability, High Availability, Disaster Recovery, Network Management (400+ Firewalls, SD-WAN), Mobile Device Management (MDM), Large Scale IT Infrastructure Implementation & Maintenance</li>
-                            <li><strong>Network Management:</strong> Networking, Firewall, MPLS, SIP Trunk and Media Gateways</li>
-                            <li><strong>Digital & Business Transformation:</strong> ERP/CRM (SAP S/4HANA), IoT, Edge Technologies, AI/ML Integration, LLMOps (GPT-4, Mistral RAG), Data Analytics (PySpark, Real-Time BI), Process Automation, Process & Productivity Enhancement</li>
-                            <li><strong>DevOps & SRE Excellence:</strong> Docker, Kubernetes, Jenkins, GitLab CI/CD, Prometheus, Grafana, Automation (Terraform, Ansible), Continuous Improvement</li>
-                            <li><strong>Financial & Vendor Management:</strong> Budget Planning, Cost Optimization (Cloud & Operations), Vendor Negotiations, SLA Management, Procurement</li>
-                            <li><strong>Team & Talent Development:</strong> Mentorship, Global Team Leadership, Performance Management, Culture Building, Talent Acquisition</li>
-                            <li><strong>Business Acumen & Product Lifecycle:</strong> Concept to Sales Conversion, Product Development, Go-to-Market Strategy</li>
-                            <li><strong>Domain Expertise:</strong> Payments, Telecom, Card Technology, Financial Inclusion</li>
+                            <li><strong>Strategic IT Leadership:</strong> Enterprise IT Strategy, Business Alignment, C-suite Collaboration, IT Governance, M&A Integration</li>
+                            <li><strong>Cybersecurity & Risk Management:</strong> ISO 27001, Zero Trust Architecture, ISMS, IAM, XDR, MDR, RBAC</li>
+                            <li><strong>Cloud & Infrastructure:</strong> AWS (EC2, S3, Lambda, EKS), Azure (VMs, AKS), Hybrid Cloud, SD-WAN, MDM</li>
+                            <li><strong>Digital Transformation:</strong> ERP/CRM (SAP S/4HANA), IoT, AI/ML Integration, LLMOps, Data Analytics</li>
+                            <li><strong>DevOps & SRE:</strong> Docker, Kubernetes, Jenkins, Terraform, Prometheus, Grafana</li>
                         </ul>
                     </div>
                 </div>
 
+                <!-- Career Journey Tab -->
                 <div id="career-journey" class="tab-content-section">
                     <div class="career-journey-section">
-                      <!-- Changed h2 to be bold via CSS style rule -->
-                      <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-1 mb-3">CAREER JOURNEY</h2>
+                        <h2>CAREER JOURNEY</h2>
                         <div class="career-journey">
                             <div class="experience-block">
                                 <strong>InMobi Pvt Ltd</strong>
@@ -512,127 +391,111 @@
                                 <span class="journey-description">Scaling operations and network architecture.</span>
                             </div>
                             <div class="experience-block">
-                                <strong>Rebel Foods Services Pvt Ltd</strong>
+                                <strong>Rebel Foods</strong>
                                 <span>Global AVP IT & Infrastructure</span>
                                 <span>Oct 2015 - Mar 2021</span>
-                                <span class="journey-description">Leading large-scale cloud and infrastructure growth.</span>
+                                <span class="journey-description">Leading cloud and infrastructure growth.</span>
                             </div>
                             <div class="experience-block">
-                                <strong>Rebel Foods Services Pvt Ltd</strong>
-                                <span>Global Vice President, IT and Infrastructure</span>
+                                <strong>Rebel Foods</strong>
+                                <span>Global Vice President, IT</span>
                                 <span>Apr 2021 - Current</span>
-                                <span class="journey-description">Driving strategic digital transformation and cybersecurity.</span>
+                                <span class="journey-description">Driving digital transformation and cybersecurity.</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Accomplishments Tab -->
                 <div id="accomplishments" class="tab-content-section">
-                    <div class="select-accomplishments-section mb-6">
-                     <!-- Changed h2 to be bold via CSS style rule -->
-                     <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-1 mb-3">ACCOMPLISHMENTS</h2>
+                    <div class="accomplishments-section">
+                        <h2>ACCOMPLISHMENTS</h2>
                         <ul>
-                            <li><strong>Cybersecurity & Compliance Transformation:</strong> Orchestrated comprehensive cybersecurity program (ISO 27001-certified ISMS, Zero Trust Architecture, advanced SSO, IAM, XDR, MDR, RBAC), achieving <strong>40% reduction in vulnerabilities</strong> and <strong>100% audit compliance</strong> (PwC, EY, KPMG), concurrently reducing cybersecurity insurance premiums by <strong>15%</strong>.</li>
-                            <li><strong>Global Infrastructure & Network Optimization:</strong> Directed strategic design and optimization of global network infrastructure (<strong>400+ firewalls, SD-WAN</strong>), ensuring secure, high-performance connectivity and robust end-user security across <strong>450+ cloud kitchens</strong> and <strong>10+ global markets</strong>. Deployed MDM solutions for efficient device management.</li>
-                            <li><strong>Revenue Growth & Operational Efficiency through Digital Innovation:</strong> Led enterprise-wide digital transformation, deploying <strong>AI-driven food traceability</strong> and <strong>IoT-based kitchen asset tracking systems</strong> that directly contributed to a <strong>30% increase in revenue</strong> and a <strong>35% improvement in operational efficiency</strong> across <strong>450+ cloud kitchens in 4+ countries</strong>.</li>
-                            <li><strong>ERP & Business Process Streamlining:</strong> Orchestrated global <strong>SAP BI S/4HANA migration</strong> across <strong>10+ global markets</strong>, fundamentally streamlining financial and supply chain processes, cutting reporting times by <strong>35%</strong>, and enabling real-time analytics for strategic decision-making.</li>
-                            <li><strong>Significant Cost Optimization & Strategic Procurement:</strong> Realized <strong>₹5Cr/year (30%) in IT budget optimization</strong> through strategic AWS cost management (rightsizing, reserved instances). Led high-stakes negotiations for multi-year enterprise contracts with AWS, Azure, and Sophos, yielding <strong>₹3M in annual savings</strong> and a <strong>25% improvement in vendor SLA adherence</strong>.</li>
-                            <li><strong>AI/ML & Operational Intelligence Leadership:</strong> Championed integration of advanced <strong>AI/ML and LLMOps strategies</strong>, including RAG architectures, leveraging models like Mistral and GPT-4 to drive operational intelligence and competitive advantage across business units.</li>
-                            <li><strong>DevOps & SRE Excellence:</strong> Transformed software delivery cycles by <strong>50%</strong> and reduced critical system downtime by <strong>25%</strong> by instituting robust <strong>DevOps and SRE practices</strong> (Jenkins, Kubernetes, Prometheus, Grafana), fostering a culture of continuous improvement and reliability.</li>
-                            <li><strong>Talent Development & Global Team Leadership:</strong> Recognized with <strong>Best Mentor, IT Support, and Leadership Awards</strong>. Cultivated high-performing international teams (<strong>50+ future leaders</strong>), fostering innovation, accountability, and excellence to consistently exceed strategic goals and build strong talent pipelines.</li>
+                            <li><strong>Cybersecurity Transformation:</strong> Achieved <strong>40% reduction in vulnerabilities</strong> and <strong>100% audit compliance</strong> (PwC, EY, KPMG).</li>
+                            <li><strong>Global Infrastructure:</strong> Managed <strong>400+ firewalls, SD-WAN</strong> across <strong>450+ cloud kitchens</strong> and <strong>10+ global markets</strong>.</li>
+                            <li><strong>Revenue Growth:</strong> Deployed AI and IoT systems driving <strong>30% revenue increase</strong> and <strong>35% operational efficiency</strong>.</li>
+                            <li><strong>Cost Optimization:</strong> Realized <strong>₹5Cr/year (30%) IT budget optimization</strong> through AWS cost management.</li>
+                            <li><strong>DevOps Transformation:</strong> Reduced software delivery cycles by <strong>50%</strong> and downtime by <strong>25%</strong>.</li>
                         </ul>
                     </div>
                 </div>
 
+                <!-- Awards Tab -->
                 <div id="awards" class="tab-content-section">
-                    <div class="awards-recognitions-section mb-6">
-                     <!-- Changed h2 to be bold via CSS style rule -->
-                     <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-1 mb-3">AWARDS & RECOGNITIONS</h2>
+                    <div class="awards-section">
+                        <h2>AWARDS & RECOGNITIONS</h2>
                         <ul>
-                            <li><strong>Accomplishments ISO 27001:</strong> Achieved <strong>2013 certification</strong>, conducted PwC/EY/KPMG audits (<strong>2022</strong>).</li>
-                            <li><strong>Accomplishments High-Growth IT:</strong> Deployed <strong>1,500-seater Contact Centre (2014)</strong> at OLACabs; <strong>350+ cloud kitchens</strong>, <strong>AWS migration Award (2018)</strong> at Rebel Foods.</li>
-                            <li><strong>Cost Optimisation:</strong> Saved <strong>₹ 5.5Cr /year</strong> through IT process streamlining (<strong>2016</strong>).</li>
-                            <li><strong>Award-Winning Leadership:</strong> <strong>Best Mentor, 2019 IT Support, 2017 and Leadership Awards</strong> (Rebel Foods).</li>
+                            <li><strong>ISO 27001:</strong> Achieved certification (2013), passed PwC/EY/KPMG audits (2022).</li>
+                            <li><strong>High-Growth IT:</strong> Deployed 1,500-seater Contact Centre (2014) at OLACabs.</li>
+                            <li><strong>AWS Migration Award (2018)</strong> at Rebel Foods for 350+ cloud kitchens migration.</li>
+                            <li><strong>Cost Optimisation:</strong> Saved ₹5.5Cr/year through IT process streamlining (2016).</li>
+                            <li><strong>Best Mentor, IT Support, and Leadership Awards</strong> at Rebel Foods.</li>
                         </ul>
                     </div>
                 </div>
 
+                <!-- Professional Experience Tab -->
                 <div id="professional-experience" class="tab-content-section">
-                    <div class="professional-experience-section mb-6">
-                     <!-- Changed h2 to be bold via CSS style rule -->
-                     <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-1 mb-3">PROFESSIONAL EXPERIENCE</h2>
-
+                    <div class="professional-experience-section">
+                        <h2>PROFESSIONAL EXPERIENCE</h2>
                         <div class="mb-4">
                             <p class="job-title">Global Vice President, IT and Infrastructure</p>
-                            <p class="company-name">Rebel Foods Services Pvt Ltd | Mumbai, India</p>
+                            <p class="company-name">Rebel Foods | Mumbai, India</p>
                             <p class="date-range">April 2021 – Current</p>
                             <ul>
-                                <li><strong>Architected and led comprehensive cybersecurity transformation</strong>, implementing <strong>ISO 27001-certified ISMS, Zero Trust Architecture, and advanced SSO, IAM, XDR, MDR, and RBAC solutions</strong>.</li>
-                                <li><strong>Forged strategic partnerships with C-suite executives</strong> to align IT initiatives with core business objectives, enabling <strong>scalable cloud architectures (AWS, Azure)</strong> and ensuring <strong>high uptime</strong> for mission-critical systems.</li>
-                                <li><strong>Spearheaded enterprise-wide digital transformation</strong>, deploying <strong>AI-driven food traceability</strong> and <strong>IoT-based kitchen asset tracking systems</strong>.</li>
-                                <li><strong>Directed global SAP BI S/4HANA migration</strong>, streamlining financial and supply chain processes and enabling <strong>real-time analytics</strong> for over <strong>10 global markets</strong>.</li>
-                                <li><strong>Pioneered and integrated advanced AI/ML and LLMOps strategies</strong>, including RAG architectures, leveraging models like Mistral and GPT-4 to drive operational intelligence.</li>
-                                <li><strong>Accelerated software delivery and reduced downtime by instituting robust DevOps and SRE practices</strong> (Jenkins, Kubernetes, Prometheus, Grafana).</li>
-                                <li><strong>Implemented a QR-based Order Accuracy System</strong> to enhance customer satisfaction and optimize resource utilization.</li>
-                                <li><strong>Cultivated high-performing international teams</strong>, fostering innovation, accountability, and excellence to consistently exceed strategic goals.</li>
+                                <li>Architected comprehensive cybersecurity transformation with ISO 27001, Zero Trust Architecture.</li>
+                                <li>Led enterprise-wide digital transformation with AI-driven food traceability and IoT systems.</li>
+                                <li>Directed global SAP S/4HANA migration across 10+ global markets.</li>
+                                <li>Pioneered AI/ML and LLMOps strategies using GPT-4 and Mistral.</li>
                             </ul>
                         </div>
-
                         <div class="mb-4">
                             <p class="job-title">Global AVP IT & Infrastructure</p>
-                            <p class="company-name">Rebel Foods Services Pvt Ltd | Mumbai, India</p>
+                            <p class="company-name">Rebel Foods | Mumbai, India</p>
                             <p class="date-range">October 2015 – March 2021</p>
                             <ul>
-                                <li><strong>Directed strategic scaling of IT infrastructure for 350+ cloud kitchens</strong> (expanding to 450+), achieving <strong>high uptime</strong> and supporting aggressive global expansion across <strong>30+ cities</strong> through optimized <strong>AWS and Azure ecosystems</strong>.</li>
-                                <li><strong>Deployed MDM solutions</strong> for efficient and secure device management across a rapidly expanding mobile workforce.</li>
-                                <li><strong>Directed IT budget optimization through strategic AWS cost management</strong> (rightsizing, reserved instances) and <strong>led multi-year enterprise contract negotiations</strong> (AWS, Azure, Sophos).</li>
-                                <li><strong>Pioneered and established a Big Data strategy</strong>, including Data Lake architecture and leveraging PySpark for advanced analytics on massive datasets, enabling deeper business insights.</li>
-                                <li><strong>Developed and implemented an IoT-based SWAT (Size, Weight, Appearance, Temperature) system</strong> to reduce order errors and generate operational savings.</li>
-                                <li><strong>Automated infrastructure provisioning with Terraform and Ansible</strong>, ensuring consistency across global operations.</li>
+                                <li>Scaled IT infrastructure for 350+ cloud kitchens to 450+.</li>
+                                <li>Directed IT budget optimization through strategic AWS cost management.</li>
+                                <li>Established Big Data strategy with Data Lake architecture and PySpark analytics.</li>
                             </ul>
                         </div>
-
                         <div class="mb-4">
                             <p class="job-title">Senior Manager IT Operations</p>
                             <p class="company-name">OLACabs | Bangalore, India</p>
                             <p class="date-range">July 2012 – October 2015</p>
                             <ul>
-                                <li><strong>Orchestrated scaling of contact center operations from 30 to 1,500 seats</strong> across <strong>120 cities</strong>, supporting over <strong>150,000 daily interactions</strong> with high uptime, directly aligning with rapid business growth and customer service excellence.</li>
-                                <li><strong>Architected MPLS and SIP trunk networks</strong>, enabling seamless global connectivity for critical business operations.</li>
-                                <li><strong>Led strategic vendor negotiations</strong>, securing contracts that resulted in reduced vendor-related operational costs.</li>
-                                <li><strong>Developed and executed a strategic IT roadmap</strong> that delivered increased revenue through innovative technology solutions and improved operational efficiencies.</li>
+                                <li>Scaled contact center from 30 to 1,500 seats across 120 cities.</li>
+                                <li>Architected MPLS and SIP trunk networks for global connectivity.</li>
                             </ul>
                         </div>
-
                         <div class="mb-4">
                             <p class="job-title">Senior Systems Administrator</p>
-                            <p class="company-name">InMobi Pvt Ltd | Bangalore, India</p>
+                            <p class="company-name">InMobi | Bangalore, India</p>
                             <p class="date-range">February 2007 – December 2011</p>
                             <ul>
-                                <li><strong>Managed and optimized IT infrastructure across 25 global offices</strong>, maintaining <strong>high uptime</strong> for <strong>180+ users</strong> while strategically supporting organizational growth.</li>
-                                <li><strong>Directed Active Directory migration for over 500 users</strong>, completing the project two months ahead of schedule with zero operational downtime and ensuring scalable user management for business expansion.</li>
-                                <li><strong>Oversaw resolution of support tickets</strong> using the IT management system Impulse, ensuring efficient assignment and escalation processes and contributing to service level adherence.</li>
+                                <li>Managed IT infrastructure across 25 global offices for 180+ users.</li>
+                                <li>Directed Active Directory migration for over 500 users with zero downtime.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
+                <!-- Board & ESG Tab -->
                 <div id="board-esg" class="tab-content-section">
-                    <div class="board-esg-section mb-6">
-                        <!-- Changed h2 to be bold via CSS style rule -->
-                        <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-1 mb-3">BOARD & ESG CONTRIBUTIONS</h2>
+                    <div class="board-esg-section">
+                        <h2>BOARD & ESG CONTRIBUTIONS</h2>
                         <ul>
-                            <li><strong>Chaired IT Governance Committee:</strong> Enabled <strong>₹15M+ in strategic tech investments</strong>, ensuring alignment with business objectives and risk mitigation.</li>
-                            <li><strong>ESG Tech Sponsor:</strong> Championed initiatives that reduced data center energy impact by <strong>25%</strong>, contributing to corporate sustainability goals.</li>
-                            <li><strong>Advised CFO on Zero Trust:</strong> Provided strategic counsel on Zero Trust adoption, directly contributing to a <strong>15% reduction in cybersecurity insurance premiums</strong>.</li>
+                            <li><strong>Chaired IT Governance Committee:</strong> Enabled ₹15M+ in strategic tech investments.</li>
+                            <li><strong>ESG Tech Sponsor:</strong> Reduced data center energy impact by 25%.</li>
+                            <li><strong>Advised CFO on Zero Trust:</strong> Contributed to 15% reduction in cybersecurity insurance premiums.</li>
                         </ul>
                     </div>
                 </div>
 
+                <!-- Education Tab -->
                 <div id="education" class="tab-content-section">
-                    <div class="education-section mb-6">
-                       <!-- Changed h2 to be bold via CSS style rule -->
-                       <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-1 mb-3">EDUCATION</h2>
+                    <div class="education-section">
+                        <h2>EDUCATION</h2>
                         <p class="font-bold">Executive MBA</p>
                         <p>Leadership & Strategy | <strong>Indian Institute of Management (IIM) Calcutta</strong>, 2018</p>
                         <p class="mt-2 font-bold">Master's Computer Applications</p>
@@ -646,33 +509,30 @@
     <script>
         // JavaScript function to handle tab switching
         function openTab(evt, tabName) {
-            // Declare all variables
             var i, tabcontent, tablinks;
 
-            // Get all elements with class="tab-content-section" and hide them
             tabcontent = document.getElementsByClassName("tab-content-section");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
             }
 
-            // Get all elements with class="tab-button" and remove the "active" class
             tablinks = document.getElementsByClassName("tab-button");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
 
-            // Show the current tab, and add an "active" class to the button that opened the tab
             document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
             evt.currentTarget.className += " active";
         }
 
-        // Function to reveal the full profile content (tabs and other sections)
+        // Function to reveal the full profile content
         function showFullProfile() {
-            document.getElementById('summary-landing').style.display = 'none'; // Hide the initial summary
-            document.getElementById('exploreButtonContainer').style.display = 'none'; // Hide the explore button
-            document.getElementById('full-profile-content').style.display = 'block'; // Show the tabbed content
+            document.getElementById('summary-landing').style.display = 'none';
+            document.getElementById('exploreButtonContainer').style.display = 'none';
+            document.getElementById('full-profile-content').style.display = 'block';
 
-            // Activate the Summary tab within the new tabbed view
             const summaryTabButton = document.querySelector(".tab-button[onclick*='summary-tab-content']");
             if (summaryTabButton) {
                 summaryTabButton.click();
@@ -681,24 +541,15 @@
 
         // Set the initial state on page load
         document.addEventListener("DOMContentLoaded", function() {
-            try {
-                // Ensure only the landing summary is visible and full profile content is hidden
-                document.getElementById('summary-landing').style.display = 'block';
-                document.getElementById('exploreButtonContainer').style.display = 'block';
-                document.getElementById('full-profile-content').style.display = 'none';
+            document.getElementById('summary-landing').style.display = 'block';
+            document.getElementById('exploreButtonContainer').style.display = 'block';
+            document.getElementById('full-profile-content').style.display = 'none';
 
-                // Hide all tab content sections within the full-profile-content initially
-                var tabcontent = document.getElementsByClassName("tab-content-section");
-                for (var i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-
-                // Ensure the specific summary tab content is visible when the full profile is revealed
-                document.getElementById('summary-tab-content').style.display = 'block';
-
-            } catch (error) {
-                console.error("Error during initial page setup:", error);
+            var tabcontent = document.getElementsByClassName("tab-content-section");
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
             }
+            document.getElementById('summary-tab-content').style.display = 'block';
         });
     </script>
 </body>
